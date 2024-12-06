@@ -1,12 +1,14 @@
 'use client'
 import Link from 'next/link';
 import React from 'react'
-import { Button } from './ui/button';
+import { Button } from '../../../components/ui/button';
 import {  FaBriefcase, FaLaptop, FaShieldAlt } from "react-icons/fa";
 import { BsLayoutTextSidebarReverse } from "react-icons/bs";
 import { usePathname } from 'next/navigation';
 import { BookTemplate, CircleHelp, Settings, Settings2 } from 'lucide-react';
 import { UserButton, useUser } from '@clerk/nextjs';
+import { IoCreateOutline } from "react-icons/io5";
+
 
 
 const Sidebar = () => {
@@ -16,17 +18,22 @@ const Sidebar = () => {
 
         
       return (
-        <div className="shadow-md h-screen p-7" >
+        <div className="shadow-md h-screen p-4" >
         {/* <Link href={"/"}> <Image src="./logo.svg" width={120} height={80} alt="Logo"/></Link> */}
         <h1 className='text-3xl font-black font-sans text-start px-2'>ResumX</h1>
    
-         <div className=" flex flex-col  gap-2 mt-6" >   
+         <div className=" flex flex-col  gap-2 mt-12" >   
            {/* <PdfDialog isMax={files?.length>=5?true:false}/> */}
 
           <Link href={`/dashboard`}>
           
           <Button variant="ghost" className={`w-full flex justify-start ${path == "/dashboard"&&"bg-slate-100"}`}>
              <BsLayoutTextSidebarReverse className=""/>  Dashboard
+           </Button></Link>
+          <Link href={`/dashboard/create`}>
+          
+          <Button variant="ghost" className={`w-full flex justify-start ${path == "/dashboard/create"&&"bg-slate-100"}`}>
+             <IoCreateOutline className=""/>  Create
            </Button></Link>
           <Link href={`/dashboard/templates`}>
           
