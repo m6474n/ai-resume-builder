@@ -24,17 +24,18 @@ const Sidebar = () => {
    
          <div className=" flex flex-col  gap-2 mt-12" >   
            {/* <PdfDialog isMax={files?.length>=5?true:false}/> */}
+           <Link href={`/dashboard/create`}>
+          
+          <Button variant="" className={`w-full flex justify-center mb-6 ${path == "/dashboard/create"&&"bg-slate-100"}`}>
+             <IoCreateOutline className=""/>  Create
+           </Button></Link>
 
           <Link href={`/dashboard`}>
           
           <Button variant="ghost" className={`w-full flex justify-start ${path == "/dashboard"&&"bg-slate-100"}`}>
              <BsLayoutTextSidebarReverse className=""/>  Dashboard
            </Button></Link>
-          <Link href={`/dashboard/create`}>
-          
-          <Button variant="ghost" className={`w-full flex justify-start ${path == "/dashboard/create"&&"bg-slate-100"}`}>
-             <IoCreateOutline className=""/>  Create
-           </Button></Link>
+       
           <Link href={`/dashboard/templates`}>
           
           <Button variant="ghost" className={`w-full flex justify-start ${path == "/dashboard/templates"&&"bg-slate-100"}`}>
