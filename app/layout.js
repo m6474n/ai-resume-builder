@@ -7,6 +7,7 @@ import {
 } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 import "./globals.css";
+import { ConvexClientProvider } from './ConvexClientProvider';
 
 
 
@@ -25,7 +26,11 @@ export default function RootLayout({ children }) {
         <body
           className={` ${inter.className} antialiased`}
         >
+            <ConvexClientProvider>
+
+
           {children}
+            </ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>

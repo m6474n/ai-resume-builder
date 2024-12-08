@@ -44,7 +44,7 @@ export default function page() {
   </Link>
      </div>
      {/* TEmplated */}
-     <div className="flex flex-row justify-between items-center w-full my-8">
+     <div  className="flex flex-row justify-between items-center w-full my-8">
      <div className="flex flex-col gap-2">
      <h2 className="font-bold font-sans text-xl">Templates</h2>
      </div>
@@ -52,8 +52,8 @@ export default function page() {
   <p className="text-slate-700 flex flex-row items-center gap-2">see all <BsArrowRight/></p>
   </Link>
      </div>
-     <div className="flex flex-wrap w-full gap-3 items-center">
-    <Link href={'/dashboard/resume/create'}>
+     <div  className="flex flex-wrap w-full gap-3 items-center">
+    <Link key={"add_new"} href={'/dashboard/resume/create'}>
     <div className="p-4 border-dashed border-2 border-slate-800 min-w-[200px] h-[250px]  rounded-xl flex gap-3 flex-col items-center justify-center">
    <IoAdd className="scale-150"/> Blank Resume
   </div></Link>
